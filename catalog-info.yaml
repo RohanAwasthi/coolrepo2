@@ -1,0 +1,33 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "testchecking1"
+
+  links:
+    - url: https://github.com/RohanAwasthi/coolrepo2
+      title: "testchecking1"
+      icon: code
+
+  labels:
+    system: web-apps
+    trackid: "checkcheck"
+    environmentname: your-env
+
+  tags:
+    - python
+    - aws
+    - "applicationtype-webapplication"
+
+  annotations:
+    # add elastic beanstalk annotation
+    jenkins.io/github-folder: 'custom-actions/tf-testchecking1'
+    github.com/project-slug: RohanAwasthi/coolrepo2
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/linguist: https://github.com/ItRachii/ebs-sample-python-application
+    sonarqube.org/project-key: 'python-app/aws-elb-python'
+
+spec:
+  type: service
+  lifecycle: experimental
+  system: elasticbeanstalk
+  owner: "user:default/devtanu.majumder"
